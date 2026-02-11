@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import html
+import re
 from typing import Any
 
 import aiohttp
@@ -15,11 +16,25 @@ def _normalize(text: str) -> str:
 
 
 def _safe_float(value: Any) -> float | None:
-    if value in (None, "", "indisponibil"):
+    if value is None:
         return None
+    if isinstance(value, (int, float)):
+        return float(value)
+    text = html.unescape(str(value)).replace("\u00a0", " ").strip()
+    if not text:
+        return None
+    if "indisponibil" in text.lower():
+        return None
+    text = text.replace(",", ".")
     try:
-        return float(str(value).replace(",", "."))
+        return float(text)
     except ValueError:
+        match = re.search(r"[-+]?\d+(?:\.\d+)?", text)
+        if match:
+            try:
+                return float(match.group(0))
+            except ValueError:
+                return None
         return None
 
 
@@ -49,7 +64,11 @@ def _clean_updated(value: Any) -> str | None:
 def _extract_properties(properties: dict[str, Any]) -> dict[str, Any]:
     return {
         "station": properties.get("nume"),
-        "temperature": _safe_float(properties.get("tempe")),
+        "temperature": _safe_float(
+            properties.get("tempe")
+            or properties.get("temp")
+            or properties.get("temperatura")
+        ),
         "humidity": _safe_int(properties.get("umezeala")),
         "phenomenon": properties.get("fenomen_e"),
         "clouds": properties.get("nebulozitate"),
