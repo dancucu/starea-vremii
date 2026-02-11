@@ -1,5 +1,7 @@
 # Starea Vremii (Home Assistant)
 
+[![GitHub release (pre-release)](https://img.shields.io/github/v/release/dancucu/starea-vremii?include_prereleases)](https://github.com/dancucu/starea-vremii/releases)
+
 Custom integration that fetches weather data from Meteoromania and exposes a sensor for a selected county or station.
 
 ## Install
