@@ -1,0 +1,11 @@
+{
+  "domain": "starea_vremii",
+  "name": "Starea Vremii",
+  "version": "0.1.0",
+  "documentation": "https://www.meteoromania.ro/",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": [],
+  "config_flow": true,
+  "iot_class": "cloud_polling"
+}

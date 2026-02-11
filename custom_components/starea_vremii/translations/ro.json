@@ -1,0 +1,52 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Starea Vremii",
+        "description": "Alege metoda de selectie pentru starea vremii.",
+        "data": {
+          "mode": "Selectie"
+        }
+      },
+      "county": {
+        "title": "Starea Vremii",
+        "description": "Alege un judet pentru afisarea starii vremii.",
+        "data": {
+          "county": "Județ"
+        }
+      },
+      "station": {
+        "title": "Starea Vremii",
+        "description": "Alege o stație pentru afisarea starii vremii.",
+        "data": {
+          "station": "Stație"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Starea Vremii",
+        "description": "Alege metoda de selectie pentru starea vremii.",
+        "data": {
+          "mode": "Selectie"
+        }
+      },
+      "county": {
+        "title": "Starea Vremii",
+        "description": "Alege un judet pentru afisarea starii vremii.",
+        "data": {
+          "county": "Județ"
+        }
+      },
+      "station": {
+        "title": "Starea Vremii",
+        "description": "Alege o stație pentru afisarea starii vremii.",
+        "data": {
+          "station": "Stație"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Starea Vremii",
+        "description": "Choose how to select weather data.",
+        "data": {
+          "mode": "Selection"
+        }
+      },
+      "county": {
+        "title": "Starea Vremii",
+        "description": "Choose a county to display weather data.",
+        "data": {
+          "county": "County"
+        }
+      },
+      "station": {
+        "title": "Starea Vremii",
+        "description": "Choose a station to display weather data.",
+        "data": {
+          "station": "Station"
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Starea Vremii",
+        "description": "Choose how to select weather data.",
+        "data": {
+          "mode": "Selection"
+        }
+      },
+      "county": {
+        "title": "Starea Vremii",
+        "description": "Choose a county to display weather data.",
+        "data": {
+          "county": "County"
+        }
+      },
+      "station": {
+        "title": "Starea Vremii",
+        "description": "Choose a station to display weather data.",
+        "data": {
+          "station": "Station"
+        }
+      }
+    }
+  }
+}
