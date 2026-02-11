@@ -28,22 +28,28 @@ type: entities
 title: Vremea Alba
 entities:
   - entity: sensor.starea_vremii_alba
-  - attribute: station
+  - type: attribute
+    attribute: station
     entity: sensor.starea_vremii_alba
     name: Statie
-  - attribute: updated
+  - type: attribute
+    attribute: updated
     entity: sensor.starea_vremii_alba
     name: Actualizat
-  - attribute: humidity
+  - type: attribute
+    attribute: humidity
     entity: sensor.starea_vremii_alba
     name: Umezeala
-  - attribute: wind
+  - type: attribute
+    attribute: wind
     entity: sensor.starea_vremii_alba
     name: Vant
-  - attribute: pressure
+  - type: attribute
+    attribute: pressure
     entity: sensor.starea_vremii_alba
     name: Presiune
-  - attribute: phenomenon
+  - type: attribute
+    attribute: phenomenon
     entity: sensor.starea_vremii_alba
     name: Fenomen
 ```
